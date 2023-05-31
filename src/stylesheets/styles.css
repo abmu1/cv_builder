@@ -1,0 +1,233 @@
+body{
+  height: 100dvh;
+  margin: 0;
+}
+#root{
+  height: 100%;
+}
+.App{
+  font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  height: 100%;
+}
+
+.preview, .form{
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 8px;
+  height: 100%;
+}
+
+.sidebar, .main{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+  padding-top: 32px;
+}
+
+.sidebar{
+  background-color: rgb(45, 45, 45);
+  color: rgb(245, 245, 245);
+}
+
+.main{
+  background-color: rgb(245, 245, 245);
+  color: rgb(45, 45, 45);
+  padding-right: 64px;
+  position: relative;
+}
+
+.personal-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  margin-top: 24px;
+}
+
+.experience, .education{
+  display: grid;
+  gap: 8px;
+}
+
+.work-experience, .education-background{
+  display: grid;
+  gap: 64px;
+}
+
+.add{
+  display: grid;
+  gap: 2px;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+.profile-input{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding-top: 3px;
+}
+.image-label{
+ border-radius: 50%; 
+ background-color: white;
+ opacity: 0.65;
+ position: relative;
+}
+#camera-icon{
+  position: absolute;
+  top: 75%;
+  left: 60%;
+}
+
+.save, .edit{
+  position: absolute;
+  right: 10px;
+  padding: 8px;
+  background-color: rgb(69, 69, 69);
+  color: rgb(213, 213, 213);
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  top: 10px;
+}
+
+
+.profile-pic{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  justify-self: center;
+}
+.image-container{
+  display: grid;
+  justify-content: center;
+}
+
+.name{
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-top: 8px;
+
+}
+
+.bold{
+  font-weight: 600;
+}
+.bolder{
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.skills-display{
+  display: grid;
+  gap: 16px;
+}
+
+#error{
+  color: rgb(255, 101, 101);
+  border: 2px solid rgb(241, 241, 241);
+  background-color: rgb(115, 115, 115);
+}
+
+
+
+
+
+h1{
+  margin-bottom: 0;
+}
+h2{
+  font-size: 40px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid gray;
+}
+h3{
+  margin-bottom: 8px;
+}
+p{
+  margin: 0;
+}
+
+input{
+  max-width: 400px;
+  display: block;
+}
+
+input:focus{
+  outline: 2px solid gray;
+}
+
+input[type="file"] { 
+  display: none;
+}
+
+textarea{
+  width: 400px;
+  height: 150px;
+}
+button{
+  width: fit-content;
+}
+
+
+@media (max-width:1200px){
+  input{
+    max-width: 250px;
+  }
+
+  textarea{
+    width: 250px;
+  }
+}
+
+
+@media (max-width:1000px){
+  .preview, .form{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar, .main{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px;
+    padding-top: 16px;
+  }
+
+  .personal-info{
+    margin-bottom: 32px;
+    margin-top: 12px;
+  }
+
+  .experience, .education{
+    gap: 4px;
+  }
+
+  .work-experience, .education-background{
+    gap: 32px;
+  }
+
+  .name{
+    font-size: 32px;
+  }
+
+  h2{
+    margin-bottom: 8px;
+  }
+
+  input{
+    max-width: 300px;
+  }
+
+  textarea{
+    width: 300px;
+  }
+}
+
+
+
