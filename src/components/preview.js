@@ -3,12 +3,13 @@ function preview({state}) {
   const edit = (e) => {
     document.getElementById('main-preview').style.display = 'none';
     document.getElementById('form').style.display = 'grid';
+    document.getElementById('name').focus();
   };
   return(
     <div className="preview" id="main-preview" style={{display: 'none'}}>
       <div className="sidebar">
         <div className='image-container'>
-          <img className="profile-pic" src={state.profilePic? state.profilePic : './profile.avif'} alt='profile pic'/>
+          <img className="profile-pic" src={state.profilePic? state.profilePic : './profile.avif'} alt='Photo'/>
         </div>
         <div className="about">
           <h2>ABOUT ME</h2>
@@ -81,9 +82,9 @@ function preview({state}) {
             })}
           </div>
         </section>
-        <div>
-          <button onClick={edit} className='edit'>EDIT</button>
-        </div>
+      </div>
+      <div>
+        <button onClick={edit} className='edit'>EDIT</button>
       </div>
     </div>
   )

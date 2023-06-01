@@ -16,6 +16,7 @@ body{
   grid-template-columns: 1fr 2.5fr;
   gap: 8px;
   height: 100%;
+  position: relative;
 }
 
 .sidebar, .main{
@@ -35,7 +36,6 @@ body{
   background-color: rgb(245, 245, 245);
   color: rgb(45, 45, 45);
   padding-right: 64px;
-  position: relative;
 }
 
 .personal-info{
@@ -155,10 +155,6 @@ p{
 input{
   max-width: 400px;
   display: block;
-}
-
-input:focus{
-  outline: 2px solid gray;
 }
 
 input[type="file"] { 

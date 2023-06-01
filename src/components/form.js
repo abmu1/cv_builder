@@ -129,8 +129,6 @@ function Form({setState, example}) {
     const file = document.querySelector('.profile-pic').files[0];
     if (!file) {
       profilePic = null;
-      // document.getElementById('error').style.display = 'block';
-      // return;
     }
     else{
       profilePic = URL.createObjectURL(file);
@@ -194,7 +192,6 @@ function Form({setState, example}) {
   // /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const changeBackground = (e) => {
-    document.getElementById('error').style.display = 'none';
     const file = e.currentTarget.files[0];
     const preview = document.querySelector('.profile-input');
     preview.src = URL.createObjectURL(file);
@@ -220,11 +217,10 @@ function Form({setState, example}) {
       <div className='sidebar'>
         <div className='image-container'>
           <label className='image-label'>
-            <img src='./images/anonymous.avif' className='profile-input' alt='Profile Pic'/>
+            <img src='./images/anonymous.avif' className='profile-input' alt='Photo'/>
             <input type='file' name='profilePic' className='profile-pic' onInput={changeBackground} accept="image/*, .avif"/>
             <img src='./images/camera_icon.svg' id='camera-icon'/>
           </label>
-          <div id='error' style={{display:'none'}}>Please select image</div>
         </div>
         <div className='about'>
           <h2>ABOUT ME</h2>
@@ -255,7 +251,7 @@ function Form({setState, example}) {
           <div>
             <label>
               Name
-              <input name='name' placeholder='Name' className='single name'/>
+              <input name='name' placeholder='Name' className='single name' id='name'/>
             </label>
             <label>
               Title
@@ -334,9 +330,9 @@ function Form({setState, example}) {
             })}
           </div>
         </section>
-        <div>
-          <button type='button' className='save' id='save' onClick={save}>Preview</button>
-        </div>
+      </div>
+      <div>
+        <button type='button' className='save' id='save' onClick={save}>Preview</button>
       </div>
     </form>
   )
